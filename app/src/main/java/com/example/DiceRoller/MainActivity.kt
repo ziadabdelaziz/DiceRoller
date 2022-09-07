@@ -21,12 +21,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Defining my buttons
-        val firstRollButton: Button = findViewById(R.id.button)
-        val secondRollButton: Button = findViewById(R.id.button2)
+        val RollButton: Button = findViewById(R.id.button)
+        //val secondRollButton: Button = findViewById(R.id.button2)
 
         // Buttons Listeners
-        firstRollButton.setOnClickListener{rollDice(findViewById(R.id.imageView))}
-        secondRollButton.setOnClickListener{rollDice(findViewById(R.id.imageView2))}
+        RollButton.setOnClickListener{
+            rollDice(findViewById(R.id.imageView))
+            rollDice(findViewById(R.id.imageView2))
+        }
+        //secondRollButton.setOnClickListener{rollDice(findViewById(R.id.imageView2))}
 
         // Initial roll
         rollDice(findViewById(R.id.imageView2))
